@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeActivity"
+    android:layoutDirection="rtl">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:elevation="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/etsearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint=" جستجو در همه آگهی ها"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:textColorHint="#AFAFAF"
+                android:background="@drawable/border"
+                android:paddingRight="10dp"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tvloc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="17dp"
+                android:text="تهران"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/ic_outline_location_on_24"
+                />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/scv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarr"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <TextView
+                android:id="@+id/btfilter"
+                style="@style/horizontalbutton"
+                android:text="فیلترها"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_baseline_local_bar_24"
+                />
+            <TextView
+                android:id="@+id/btdaste"
+                style="@style/horizontalbutton"
+                android:text="دسته ها"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/ic_baseline_format_list_bulleted_24"
+                />
+            <TextView
+                android:id="@+id/btfroshaparteman"
+                style="@style/horizontalbutton"
+                android:text="فروش آپارتمان"
+                />
+            <TextView
+                android:id="@+id/bttazini"
+                style="@style/horizontalbutton"
+                android:text="تزئینی و آثار هنری"
+                />
+            <TextView
+                android:id="@+id/btsystem"
+                style="@style/horizontalbutton"
+                android:text="سیستم صوتی خانگی"
+                />
+            <TextView
+                android:id="@+id/btmobl"
+                style="@style/horizontalbutton"
+                android:text="مبلمان و صندلی راحتی"
+                />
+            <TextView
+                android:id="@+id/btvasilekhab"
+                style="@style/horizontalbutton"
+                android:text="وسایل تخت و اتاق خواب"
+                />
+            <TextView
+                android:id="@+id/btkhodro"
+                style="@style/horizontalbutton"
+                android:text="خودرو سواری"
+                />
+            <TextView
+                android:id="@+id/btejare"
+                style="@style/horizontalbutton"
+                android:text="اجاره آپارتمان"
+                />
+            <TextView
+                android:id="@+id/btmobile"
+                style="@style/horizontalbutton"
+                android:text="موبایل"
+                />
+            <TextView
+                android:id="@+id/btheyvan"
+                style="@style/horizontalbutton"
+                android:text="حیوانات"
+                />
+            <TextView
+                android:id="@+id/btvasileshakhsi"
+                style="@style/horizontalbutton"
+                android:text="وسایل شخصی"
+                />
+            <TextView
+                android:id="@+id/btagahifroshghahi"
+                style="@style/horizontalbutton"
+                android:text="فقط آگهی های فروشگاهی"
+                />
+            <TextView
+                android:id="@+id/btmahal"
+                style="@style/horizontalbutton"
+                android:text="تعیین محل"
+
+                />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/view"
+        style="@style/view2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/scv"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:paddingBottom="160dp"/>
+
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottomAppBar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?attr/actionBarSize"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:menu="@menu/menu_items"-->
+
+    <!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="#F4F4F4"
+        >
+        <TextView
+            android:id="@+id/btagahi"
+            style="@style/buttonnavigation"
+            android:text="آگهی ها"
+            android:textColor="@color/colorRed"
+            app:drawableTopCompat="@drawable/smal_divar" />
+        <TextView
+            android:id="@+id/btdasteha"
+            style="@style/buttonnavigation"
+            android:text="دسته ها"
+            app:drawableTopCompat="@drawable/ic_baseline_list_24" />
+        <TextView
+            android:id="@+id/btsabt"
+            style="@style/buttonnavigation"
+            android:text="ثبت آگهی"
+            app:drawableTopCompat="@drawable/ic_baseline_add_circle_24" />
+        <TextView
+            android:id="@+id/btchat"
+            style="@style/buttonnavigation"
+            android:text="چت"
+            app:drawableTopCompat="@drawable/ic_baseline_chat_bubble_24" />
+        <TextView
+            android:id="@+id/btdivareman"
+            style="@style/buttonnavigation"
+            android:text="دیوار من"
+            app:drawableTopCompat="@drawable/ic_outline_account_box_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
